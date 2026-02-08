@@ -71,6 +71,9 @@ jobs:
         run: |
           kubectl apply -f k8s/deployment.yaml
           kubectl apply -f k8s/service.yaml
+          
+      - name: Give execute permission to smoke_test.sh
+        run: chmod +x ./smoke_test.sh
 
       - name: Run smoke tests
         run: ./smoke_test.sh
