@@ -9,8 +9,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code and model
-COPY app/ app/
-COPY model.h5 .
+COPY . .
 
 # Expose API port
 EXPOSE 8000
